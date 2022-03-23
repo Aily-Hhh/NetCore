@@ -83,7 +83,7 @@ select NumberCar, Brand, Model, YearOfRelease from Cars where YearOfRelease betw
 select LastName, FirstName, Patronymic, phone from Drivers where LastName like('%ов');
 select LastName, FirstName, Patronymic from Drivers where DateOfIssueCert = (select min(DateOfIssueCert) from Drivers);
 select LastName, FirstName, Patronymic, phone from Drivers natural join Car_Driver 
-	group by NumberDrCertificate having count(NumberDrCertificate) >= 2;
+group by NumberDrCertificate having count(NumberDrCertificate) >= 2;
 
 select Brand, Model, count(Model) as Count from Cars group by Brand, Model order by Brand, Model;
 
