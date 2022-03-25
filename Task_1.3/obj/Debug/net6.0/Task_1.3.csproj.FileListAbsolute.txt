@@ -1,5 +1,6 @@
 D:\Net Core\SuperBrands\TaskOne\Task_1.3\bin\Debug\net6.0\appsettings.Development.json
 D:\Net Core\SuperBrands\TaskOne\Task_1.3\bin\Debug\net6.0\appsettings.json
+D:\Net Core\SuperBrands\TaskOne\Task_1.3\bin\Debug\net6.0\Task_1.3.staticwebassets.runtime.json
 D:\Net Core\SuperBrands\TaskOne\Task_1.3\bin\Debug\net6.0\Task_1.3.exe
 D:\Net Core\SuperBrands\TaskOne\Task_1.3\bin\Debug\net6.0\Task_1.3.deps.json
 D:\Net Core\SuperBrands\TaskOne\Task_1.3\bin\Debug\net6.0\Task_1.3.runtimeconfig.json

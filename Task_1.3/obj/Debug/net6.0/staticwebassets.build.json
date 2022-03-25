@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "f7oUbQb/4bbwX2N9Q4Dftt15TplEjTWo3nv5Uuusk6s=",
+  "Hash": "Z1vCnekh7c9x9Nanp3JuA5rHRMpaEKDvs6z5LWuWnGU=",
   "Source": "Task_1.3",
   "BasePath": "_content/Task_1.3",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Task_1.3\\wwwroot",
+      "Source": "Task_1.3",
+      "ContentRoot": "D:\\Net Core\\SuperBrands\\TaskOne\\Task_1.3\\wwwroot\\",
+      "BasePath": "_content/Task_1.3",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Net Core\\SuperBrands\\TaskOne\\Task_1.3\\wwwroot\\index.html",
+      "SourceId": "Task_1.3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Net Core\\SuperBrands\\TaskOne\\Task_1.3\\wwwroot\\",
+      "BasePath": "_content/Task_1.3",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
 }

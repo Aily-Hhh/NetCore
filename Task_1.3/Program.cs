@@ -1,20 +1,26 @@
-var builder = WebApplication.CreateBuilder();
+var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.Map("/", async (context) =>
-{
-    context.Response.ContentType = "text/html; charset=utf-8";
-    await context.Response.SendFileAsync("html/index.html");
-});
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 
-app.Map("/postuser", async (context) =>
+app.UseRouting();
+app.UseEndpoints(endpoints =>
 {
-    context.Response.ContentType = "text/html; charset=utf-8";
-    var form = context.Request.Form;
-    string name = form["name"];
-    string age = form["age"];
-    await context.Response.WriteAsync($"<div><p>Name: {name}</p><p>Age: {age}</p></div>");
+    endpoints.MapGet("/", async context =>
+    {
+        context.Response.ContentType = "text/html; charset=utf-8";
+        await context.Response.SendFileAsync("wwwroot/index.html");
+    });
 
+    endpoints.MapPost("/postuser", async context =>
+    {
+        context.Response.ContentType = "text/html; charset=utf-8";
+        var form = context.Request.Form;
+        string name = form["name"];
+        string age = form["age"];
+        await context.Response.WriteAsync($"<div><p>Name: {name}</p><p>Age: {age}</p></div>");
+    });
 });
 
 app.Run();
