@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UzTZWgspnwZvdIBBZyAreO0nqwdiUfH2Kuy9nxec956s0C++3ZRa8e3NFuYAnz3z94h89/fu56srulEddSOFnQ==",
+  "dgSpecHash": "guhw0r9T0bk2VI9jPJlCedB2LK1zjaEt4OrZ03GMObfSIFk2p5k4/6bjS6xcVJVLUmKCDtdIV54zPA9IxfPzkg==",
   "success": true,
-  "projectFilePath": "D:\\Net Core\\SuperBrands\\TaskOne\\Task_1\\Task_1.csproj",
+  "projectFilePath": "D:\\Net Core\\SuperBrands\\TaskOne\\NetCore\\Task_1\\Task_1.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
