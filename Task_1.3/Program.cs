@@ -1,9 +1,5 @@
-using Task_1._3;
-
 var builder = WebApplication.CreateBuilder();
 var app = builder.Build();
-
-List<Person> people = new List<Person>();
 
 app.Map("/", async (context) =>
 {
