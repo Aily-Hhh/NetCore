@@ -8,31 +8,29 @@ namespace Task_1._3.Controllers
 {
     public class PersonController : Controller
     {
-        private readonly IPerson _people;
+        private PersonContext _personContext;
 
-        public PersonController(IPerson people) 
+        public PersonController(PersonContext personContext) 
         {
-            _people = people; 
+            _personContext = personContext;
         }
 
         public ViewResult List()
         {
-            var allPeople = _people.People;
-            return View(allPeople);
+            return View(_personContext.People);
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            var allPeople = _people.People;
-            SelectList teams = new SelectList(allPeople, "Id", "Name", "Age");
-            ViewBag.Teams = teams;
-            return View();
+            return View(new Person());
         }
 
         [HttpPost]
         public ActionResult Create(Person person)
         {
+            _personContext.People.Add(person);
+            _personContext.SaveChanges();
             return RedirectToAction("List");
         }
     }

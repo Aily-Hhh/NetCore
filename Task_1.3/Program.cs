@@ -7,9 +7,11 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder();
 builder.Services.AddMvc();
 builder.Services.AddTransient<IPerson, MockPerson>();
+
+string connection = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<PersonContext>(options => options.UseSqlServer(connection));
+
 var app = builder.Build();
-
-
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

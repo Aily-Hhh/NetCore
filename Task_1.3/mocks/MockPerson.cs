@@ -17,7 +17,7 @@ namespace Task_1._3.mocks
             }
             set
             {
-               
+                peopleList.Add(new Person());
             }
         }
     }
