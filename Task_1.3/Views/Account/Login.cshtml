@@ -1,0 +1,25 @@
+﻿@model Task_1._3.ViewModels.LoginModel
+ 
+<div> @Html.ActionLink("Register", "Register", "Account")</div>
+ 
+﻿@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Login</legend>
+
+        <p>
+            Enter your email <br />
+            @Html.EditorFor(model => model.Email)
+        </p>
+
+        <p>
+            Enter password <br />
+            @Html.EditorFor(model => model.Password)
+        </p>
+
+        <p>
+            <input type="submit" value="Ok" />
+        </p>
+
+    </fieldset>
+}

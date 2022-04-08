@@ -7,8 +7,10 @@ namespace Task_1._3.Models
     {
         [DisplayName("Id")]
         public int Id { get; set; }
+
         [DisplayName("Name")]
         public string Name { get; set; }
+
         [DisplayName("Age")]
         public int Age { get; set; }
     }

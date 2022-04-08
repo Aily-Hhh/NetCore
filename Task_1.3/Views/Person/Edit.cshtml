@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+@model Task_1._3.Models.Person
+
+<h2>User № @Model.Id</h2>
+@using (Html.BeginForm("Edit", "Person", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(m => m.Name, "Name")
+            <br />
+            @Html.EditorFor(m => m.Name)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Age, "Age")
+            <br />
+            @Html.EditorFor(m => m.Age)
+ 
+        </p>
+        <p><input type="submit" value="Save" /></p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("К списку users", "List")
+</div>

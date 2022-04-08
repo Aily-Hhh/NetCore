@@ -4,7 +4,9 @@
     Layout = null;
 }
 
-﻿@using (Html.BeginForm())
+@if(User.Identity.IsAuthenticated && User.IsInRole("user"))
+{
+﻿using (Html.BeginForm())
 {
     <fieldset>
         <legend>User</legend>
@@ -25,6 +27,13 @@
 
     </fieldset>
 }
+}
+else
+    {
+    <div> @Html.ActionLink("Login", "Login", "Account") </div>
+    <div> @Html.ActionLink("Register", "Register", "Account")</div>
+    }
+
 <div>
     @Html.ActionLink("К списку users", "List")
 </div>

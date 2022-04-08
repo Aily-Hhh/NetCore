@@ -1,0 +1,32 @@
+﻿@model Task_1._3.ViewModels.RegisterModel
+
+<div>
+    @Html.ActionLink("Login", "Login", "Account")
+</div> 
+
+﻿@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Регистрация нового пользователя</legend>
+
+        <p>
+            Enter your email <br />
+            @Html.EditorFor(model => model.Email)
+        </p>
+
+        <p>
+            Enter password <br />
+            @Html.EditorFor(model => model.Password)
+        </p>
+        
+        <p>
+            Repeat password <br />
+            @Html.EditorFor(model => model.PasswordConfirm)
+        </p>
+
+        <p>
+            <input type="submit" value="Регистрация" />
+        </p>
+
+    </fieldset>
+}
